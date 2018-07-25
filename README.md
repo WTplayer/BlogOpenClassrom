@@ -10,3 +10,5 @@ IDE : Angular IDE
 Autor : WODLING Térence
 
 date : 25/07/2018
+
+Mail : terencewodling@gmail.com
