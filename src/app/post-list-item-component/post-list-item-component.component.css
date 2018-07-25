@@ -1,0 +1,27 @@
+.btnSize{
+	width : 30px;
+	height : 30px;
+	font-size : 16px;
+}
+.glyphicon{
+	margin-left : -5px;
+}
+.marginTop{
+	margin-top : 3px;
+}
+.flex{
+	display : flex;
+}
+.flexSpace{
+	justify-content : space-between;
+}
+.rightOfButton{
+	font-size : 20px;
+	padding-left : 10px;
+	
+}
+.grey{
+	padding-left:5px;
+	padding-top : 3px;
+	color : grey;
+}

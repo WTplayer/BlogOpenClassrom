@@ -1,0 +1,34 @@
+<li
+	[ngClass]="{'list-group-item marginBot' : true,
+			   'list-group-item-success' : postLoveIts > 0,
+			   'list-group-item-danger' : postLoveIts < 0 }">
+	<div class="flex flexSpace">
+		<div>
+			<h3 class="marginTop">{{postTitle}}</h3>
+		</div>
+		<div>{{postCreatedAt | async | date:'dd.MM.yyyy &nbsp; HH:mm:ss.sss'}}</div>
+	</div>
+	<p>{{postContent}}</p>
+	<div class="flex flexSpace">
+		<div class="btn-group" role="groupe" aria-label="Group Up Down">
+			<button (click)="onLoveIt()" type="button"
+				class="btn btn-success btnSize">
+				<span class="glyphicon glyphicon-thumbs-up"></span>
+			</button>
+			<button (click)="onDontLoveIt()" type="button"
+				class="btn btn-danger btnSize">
+				<span class="glyphicon glyphicon-thumbs-down"></span>
+			</button>
+		</div>
+		<div>
+			<span class="rightOfButton" *ngIf="postLoveIts > 0">{{postLoveIts}}
+				<span class="glyphicon glyphicon-thumbs-up grey"></span>
+			</span> <span class="rightOfButton" *ngIf="postLoveIts < 0">{{-postLoveIts}}
+				<span class="glyphicon glyphicon-thumbs-down grey"></span>
+			</span>
+		</div>
+		<div>
+			<button (click)="onRemove()" class="btn btn-danger">Remove</button>
+		</div>
+	</div>
+</li>
